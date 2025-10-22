@@ -126,8 +126,8 @@ export default function Index() {
                 <Icon name="Award" className="text-white" size={24} />
               </div>
               <div>
-                <div className="text-lg font-bold text-navy">АДУ КО</div>
-                <div className="text-xs text-gray-500">Ассоциация доверительного управления</div>
+                <div className="text-sm font-bold text-navy leading-tight">Ассоциация доверительного</div>
+                <div className="text-sm font-bold text-navy leading-tight">управления КО</div>
               </div>
             </div>
             <div className="hidden lg:flex items-center space-x-8">
@@ -519,8 +519,8 @@ export default function Index() {
                   <Icon name="Award" size={28} className="text-navy" />
                 </div>
                 <div>
-                  <div className="text-xl font-bold">АДУ КО</div>
-                  <div className="text-sm text-white/70">Ассоциация доверительного управления</div>
+                  <div className="text-lg font-bold leading-tight">Ассоциация доверительного</div>
+                  <div className="text-lg font-bold leading-tight">управления КО</div>
                 </div>
               </div>
               <p className="text-white/80 leading-relaxed">
