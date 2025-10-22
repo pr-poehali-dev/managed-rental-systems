@@ -276,7 +276,7 @@ export default function Index() {
           </Card>
 
           <div className="mt-12 bg-white rounded-3xl p-8 md:p-12 shadow-xl">
-            <h3 className="text-3xl font-bold text-navy mb-6 text-center">Почему не резиденты, а соучредители?</h3>
+            <h3 className="text-3xl font-bold text-navy mb-6 text-center">Что получаете как резидент альянса</h3>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
@@ -284,8 +284,8 @@ export default function Index() {
                     <Icon name="Check" className="text-primary" size={18} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-navy mb-1">Равное право голоса</h4>
-                    <p className="text-gray-600 text-sm">Совместно разрабатываете стандарты и принимаете решения о развитии</p>
+                    <h4 className="font-semibold text-navy mb-1">Участие в принятии решений</h4>
+                    <p className="text-gray-600 text-sm">Голосуете за развитие стандартов и направления работы ассоциации</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -293,8 +293,8 @@ export default function Index() {
                     <Icon name="Check" className="text-primary" size={18} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-navy mb-1">Пожизненная скидка 50%</h4>
-                    <p className="text-gray-600 text-sm">Как создатель экосистемы получаете особые условия навсегда</p>
+                    <h4 className="font-semibold text-navy mb-1">Льготные условия</h4>
+                    <p className="text-gray-600 text-sm">Специальные тарифы для первых участников и долгосрочные скидки</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -302,8 +302,8 @@ export default function Index() {
                     <Icon name="Check" className="text-primary" size={18} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-navy mb-1">Инвестиция, а не расход</h4>
-                    <p className="text-gray-600 text-sm">Создаете правила игры для всего рынка, а не просто покупаете доступ</p>
+                    <h4 className="font-semibold text-navy mb-1">Реальная экономия</h4>
+                    <p className="text-gray-600 text-sm">Снижение операционных расходов на 25-35% уже в первые месяцы</p>
                   </div>
                 </div>
               </div>
@@ -313,8 +313,8 @@ export default function Index() {
                     <Icon name="Target" className="text-gold" size={18} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-navy mb-1">Коллективный бренд</h4>
-                    <p className="text-gray-600 text-sm">Вместе формируете "Альянс профессионалов" с силой для выхода на застройщиков</p>
+                    <h4 className="font-semibold text-navy mb-1">Сила коллектива</h4>
+                    <p className="text-gray-600 text-sm">Совместный выход на застройщиков с портфелем 150+ объектов</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -322,8 +322,8 @@ export default function Index() {
                     <Icon name="Target" className="text-gold" size={18} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-navy mb-1">Доказанные результаты</h4>
-                    <p className="text-gray-600 text-sm">Сначала растем внутри, затем выходим к застройщикам с портфелем 150+ объектов</p>
+                    <h4 className="font-semibold text-navy mb-1">Рост доходности</h4>
+                    <p className="text-gray-600 text-sm">Увеличение прибыльности на 25-40% через обмен опытом и закупки</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -331,8 +331,8 @@ export default function Index() {
                     <Icon name="Target" className="text-gold" size={18} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-navy mb-1">Без конкуренции внутри</h4>
-                    <p className="text-gray-600 text-sm">Ограниченное число мест — только 15 резидентов максимум</p>
+                    <h4 className="font-semibold text-navy mb-1">Эксклюзивность</h4>
+                    <p className="text-gray-600 text-sm">Ограниченное число резидентов — только лучшие игроки рынка</p>
                   </div>
                 </div>
               </div>
