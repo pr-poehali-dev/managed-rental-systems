@@ -51,12 +51,7 @@ export default function Index() {
     { icon: 'Users', title: 'Сообщество', description: 'Закрытый клуб лидеров рынка без конкуренции' }
   ]
 
-  const forumStats = [
-    { number: '500+', label: 'Инвесторов в зале' },
-    { number: '5 000+', label: 'Онлайн-зрителей' },
-    { number: '150+', label: 'Заявок за 2 дня' },
-    { number: '8', label: 'Застройщиков-партнеров' }
-  ]
+
 
   const membershipOptions = [
     {
@@ -133,7 +128,7 @@ export default function Index() {
             <div className="hidden lg:flex items-center space-x-8">
               <a href="#about" className="text-gray-700 hover:text-primary transition-colors font-medium">О нас</a>
               <a href="#membership" className="text-gray-700 hover:text-primary transition-colors font-medium">Резидентство</a>
-              <a href="#forum" className="text-gray-700 hover:text-primary transition-colors font-medium">Форумы</a>
+              <a href="#collective" className="text-gray-700 hover:text-primary transition-colors font-medium">Клуб</a>
               <a href="#benefits" className="text-gray-700 hover:text-primary transition-colors font-medium">Преимущества</a>
               <a href="#contacts" className="text-gray-700 hover:text-primary transition-colors font-medium">Контакты</a>
             </div>
@@ -182,7 +177,7 @@ export default function Index() {
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-10 py-7 border-2 border-white text-white hover:bg-white hover:text-navy">
                 <Icon name="PlayCircle" size={22} className="mr-2" />
-                О форуме
+                Узнать больше
               </Button>
             </div>
           </div>
@@ -229,23 +224,28 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="forum" className="py-20 px-6 bg-gradient-to-br from-gray-50 to-gray-100">
+      <section id="collective" className="py-20 px-6 bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-gold/10 text-gold border-gold">
-              <Icon name="Trophy" size={14} className="mr-2" />
-              Крупнейшие события рынка
+              <Icon name="Users" size={14} className="mr-2" />
+              Сила коллектива
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">
-              Инвестиционные форумы
+              Клуб первопроходцев
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ваш лифт к вершине рынка недвижимости
+              Не просто резиденты — соучредители новой экосистемы рынка
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            {forumStats.map((stat, index) => (
+            {[
+              { number: '30%', label: 'Экономия с первого месяца' },
+              { number: '5-7', label: 'Единомышленников в альянсе' },
+              { number: '25-40%', label: 'Рост доходности объектов' },
+              { number: '150+', label: 'Объектов под управлением' }
+            ].map((stat, index) => (
               <div key={index} className="text-center bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
                 <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-gold bg-clip-text text-transparent mb-2">{stat.number}</div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
@@ -255,17 +255,17 @@ export default function Index() {
 
           <Card className="bg-gradient-to-br from-primary to-navy text-white border-none shadow-2xl">
             <CardContent className="p-8 md:p-12">
-              <h3 className="text-3xl font-bold mb-8 text-center">Механика вашего роста</h3>
+              <h3 className="text-3xl font-bold mb-8 text-center">Механизмы внутреннего роста</h3>
               <div className="grid md:grid-cols-4 gap-6">
                 {[
-                  { step: '1', title: 'Подготовка базы', desc: 'Собираем 50 000+ контактов инвесторов' },
-                  { step: '2', title: 'Реклама', desc: '2 000 000 ₽ бюджет на продвижение' },
-                  { step: '3', title: 'Прямой эфир', desc: 'Технология "живой очереди"' },
-                  { step: '4', title: 'Передача объектов', desc: 'Инвесторы получают управляющих' }
+                  { icon: 'Repeat', title: 'Перекрестные продажи', desc: 'Нет мест у вас → клиент уходит к коллеге. 15% остается в системе' },
+                  { icon: 'TrendingDown', title: 'Совместные закупки', desc: 'Объединяем заказы → скидки 30-50% уже в первый месяц' },
+                  { icon: 'BookOpen', title: 'Обмен опытом', desc: 'Еженедельные разборы кейсов и успешных методик' },
+                  { icon: 'BarChart3', title: 'Общая аналитика', desc: 'Видим рыночные тренды и принимаем точные решения' }
                 ].map((item, index) => (
                   <div key={index} className="text-center">
-                    <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center text-navy font-bold text-2xl mx-auto mb-4">
-                      {item.step}
+                    <div className="w-16 h-16 bg-gold/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border-2 border-gold">
+                      <Icon name={item.icon as any} size={28} className="text-gold" />
                     </div>
                     <h4 className="font-bold text-lg mb-2">{item.title}</h4>
                     <p className="text-white/80 text-sm">{item.desc}</p>
@@ -274,6 +274,70 @@ export default function Index() {
               </div>
             </CardContent>
           </Card>
+
+          <div className="mt-12 bg-white rounded-3xl p-8 md:p-12 shadow-xl">
+            <h3 className="text-3xl font-bold text-navy mb-6 text-center">Почему не резиденты, а соучредители?</h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Icon name="Check" className="text-primary" size={18} />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-navy mb-1">Равное право голоса</h4>
+                    <p className="text-gray-600 text-sm">Совместно разрабатываете стандарты и принимаете решения о развитии</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Icon name="Check" className="text-primary" size={18} />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-navy mb-1">Пожизненная скидка 50%</h4>
+                    <p className="text-gray-600 text-sm">Как создатель экосистемы получаете особые условия навсегда</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Icon name="Check" className="text-primary" size={18} />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-navy mb-1">Инвестиция, а не расход</h4>
+                    <p className="text-gray-600 text-sm">Создаете правила игры для всего рынка, а не просто покупаете доступ</p>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 bg-gold/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Icon name="Target" className="text-gold" size={18} />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-navy mb-1">Коллективный бренд</h4>
+                    <p className="text-gray-600 text-sm">Вместе формируете "Альянс профессионалов" с силой для выхода на застройщиков</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 bg-gold/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Icon name="Target" className="text-gold" size={18} />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-navy mb-1">Доказанные результаты</h4>
+                    <p className="text-gray-600 text-sm">Сначала растем внутри, затем выходим к застройщикам с портфелем 150+ объектов</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 bg-gold/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Icon name="Target" className="text-gold" size={18} />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-navy mb-1">Без конкуренции внутри</h4>
+                    <p className="text-gray-600 text-sm">Ограниченное число мест — только 15 резидентов максимум</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -533,7 +597,7 @@ export default function Index() {
               <ul className="space-y-3 text-white/70">
                 <li><a href="#about" className="hover:text-white transition-colors">О нас</a></li>
                 <li><a href="#membership" className="hover:text-white transition-colors">Резидентство</a></li>
-                <li><a href="#forum" className="hover:text-white transition-colors">Форумы</a></li>
+                <li><a href="#collective" className="hover:text-white transition-colors">Клуб первопроходцев</a></li>
                 <li><a href="#benefits" className="hover:text-white transition-colors">Преимущества</a></li>
                 <li><a href="#contacts" className="hover:text-white transition-colors">Контакты</a></li>
               </ul>
